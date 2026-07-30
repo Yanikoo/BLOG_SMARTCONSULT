@@ -327,10 +327,10 @@ svg {
 
 .chip {
     display: grid;
-    grid-template-columns: 68px 4px 107px;
+    grid-template-columns: 68px 16px 107px;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 12px;
     margin-top: 32px;
     color: var(--color-ink);
 }
@@ -381,10 +381,10 @@ svg {
 }
 
 .chip__separator {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #e1e1ea;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    color: #e1e1ea;
 }
 
 .chip__separator--category {
