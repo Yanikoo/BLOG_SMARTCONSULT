@@ -313,8 +313,6 @@ svg {
 
 .article-hero__inner {
     width: 100%;
-    max-width: 1280px;
-    margin-inline: auto;
 }
 
 .article-hero__title {
@@ -329,7 +327,7 @@ svg {
 
 .chip {
     display: grid;
-    grid-template-columns: max-content 8px max-content;
+    grid-template-columns: 68px 4px 107px;
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -340,13 +338,16 @@ svg {
 .chip__category {
     grid-column: 1 / -1;
     justify-self: center;
-    padding: 6px 12px;
-    border: 2px solid var(--color-divider);
-    border-radius: 8px;
+    width: 83px;
+    height: 26px;
+    padding: 1px 8px;
+    border: 1px solid #e1e1ea;
+    border-radius: 4px;
     background: var(--color-surface);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 22px;
+    text-align: center;
     white-space: nowrap;
 }
 
@@ -354,26 +355,36 @@ svg {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    height: 26px;
+    border-radius: 4px;
     color: var(--color-ink);
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
+    font-weight: 400;
+    line-height: 22px;
     white-space: nowrap;
 }
 
+.chip__item--time {
+    width: 68px;
+}
+
+.chip__item--date {
+    width: 107px;
+}
+
 .chip__icon {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 32px;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
     color: var(--color-purple-dark);
 }
 
 .chip__separator {
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
-    background: var(--color-divider);
+    background: #e1e1ea;
 }
 
 .chip__separator--category {
@@ -511,6 +522,23 @@ svg {
         line-height: 40px;
     }
 
+    .chip {
+        display: flex;
+        gap: 16px;
+    }
+
+    .chip__item--time {
+        width: 78px;
+    }
+
+    .chip__item--date {
+        width: 123px;
+    }
+
+    .chip__separator--category {
+        display: block;
+    }
+
     .site-footer__inner {
         grid-template-columns: 253px max-content;
         column-gap: 80px;
@@ -639,17 +667,7 @@ svg {
     }
 
     .chip {
-        display: flex;
-        gap: 24px;
         margin-top: 40px;
-    }
-
-    .chip__item {
-        gap: 12px;
-    }
-
-    .chip__separator--category {
-        display: block;
     }
 }
 
