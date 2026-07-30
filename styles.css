@@ -287,13 +287,17 @@ svg {
 }
 
 .breadcrumbs__link {
-    color: var(--color-purple-dark);
+    color: var(--color-ink);
     text-decoration: none;
+}
+
+.breadcrumbs__link:hover {
+    color: var(--color-purple-dark);
 }
 
 .breadcrumbs__current {
     overflow: hidden;
-    color: var(--color-muted);
+    color: var(--color-divider);
     text-overflow: ellipsis;
     white-space: nowrap;
 }
