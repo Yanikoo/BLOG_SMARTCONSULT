@@ -264,6 +264,10 @@ svg {
     padding-block: 16px;
 }
 
+.breadcrumbs__container {
+    padding-inline: 12px;
+}
+
 .breadcrumbs__list {
     display: flex;
     align-items: center;
@@ -278,6 +282,10 @@ svg {
     align-items: center;
     gap: 8px;
     min-width: 0;
+}
+
+.breadcrumbs__item--current {
+    flex: 1 1 auto;
 }
 
 .breadcrumbs__link,
@@ -296,6 +304,11 @@ svg {
 }
 
 .breadcrumbs__current {
+    display: block;
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 581px;
+    min-width: 0;
     overflow: hidden;
     color: var(--color-divider);
     text-overflow: ellipsis;
