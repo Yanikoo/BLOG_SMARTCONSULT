@@ -515,6 +515,7 @@ svg {
 
 .article-content__paragraph,
 .article-contents__link,
+.article-content__list,
 .note__text {
     font-size: 16px;
     font-weight: 400;
@@ -528,10 +529,28 @@ svg {
     margin: 0;
 }
 
+.article-content__link {
+    color: #0f62fe;
+    text-decoration: underline;
+}
+
+.article-content__list {
+    margin: 0;
+    padding-left: 28px;
+}
+
+.article-content__list-item {
+    padding-left: 4px;
+}
+
 .article-section {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.article-content__main > .article-section + .article-section {
+    margin-top: 40px;
 }
 
 .article-section__figure {
@@ -665,6 +684,7 @@ svg {
 .site-header__burger:focus-visible,
 .breadcrumbs__link:focus-visible,
 .article-contents__link:focus-visible,
+.article-content__link:focus-visible,
 .note__link:focus-visible,
 .site-footer__logo-link:focus-visible,
 .site-footer__contact:focus-visible,
@@ -750,6 +770,7 @@ svg {
 
     .article-content__paragraph,
     .article-contents__link,
+    .article-content__list,
     .note__text {
         font-size: 18px;
         line-height: 26px;
@@ -893,6 +914,7 @@ svg {
 
     .article-content__paragraph,
     .article-contents__link,
+    .article-content__list,
     .note__text {
         font-size: 20px;
         line-height: 28px;
@@ -985,6 +1007,25 @@ svg {
 
     .site-footer__links {
         margin-top: 32px;
+    }
+}
+
+.article-heading--major {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+@media (min-width: 744px) {
+    .article-heading--major {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .article-heading--major {
+        font-size: 32px;
+        line-height: 40px;
     }
 }
 
