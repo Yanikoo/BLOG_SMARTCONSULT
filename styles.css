@@ -135,7 +135,7 @@ svg {
 }
 
 .site-header__action--register {
-    color: var(--color-surface);
+    color: var(--color-card);
     background: var(--color-purple-dark);
 }
 
@@ -440,6 +440,7 @@ svg {
 
 .chip__text {
     display: block;
+    font-size: 16px;
 }
 
 .article-cover {
@@ -636,6 +637,7 @@ svg {
 }
 
 @media (min-width: 1024px) {
+
     html.site-menu-open,
     html.site-menu-open body {
         overflow: auto;
@@ -805,6 +807,7 @@ svg {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
