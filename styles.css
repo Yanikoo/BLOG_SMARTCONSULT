@@ -300,7 +300,7 @@ svg {
     display: block;
     color: var(--color-ink);
     font-family: inherit;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     font-style: normal;
     line-height: 24px;
@@ -697,6 +697,11 @@ svg {
 @media (min-width: 744px) {
     .page-shell {
         padding-inline: 32px;
+    }
+
+    .breadcrumbs__link,
+    .breadcrumbs__current {
+        font-size: 16px;
     }
 
     .site-header,
