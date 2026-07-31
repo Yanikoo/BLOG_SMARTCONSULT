@@ -342,12 +342,25 @@ svg {
 }
 
 .article-hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.article-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
     width: 100%;
 }
 
 .article-hero__title {
+    width: 100%;
     max-width: 940px;
-    margin: 0 auto;
+    margin: 0;
     color: var(--color-ink);
     font-size: 24px;
     font-weight: 700;
@@ -361,7 +374,6 @@ svg {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin-top: 32px;
     color: var(--color-ink);
 }
 
@@ -433,7 +445,6 @@ svg {
 .article-cover {
     width: 100%;
     max-width: 846px;
-    margin: 24px auto 0;
     aspect-ratio: 846 / 521.1361694335938;
 }
 
@@ -594,8 +605,8 @@ svg {
         padding-inline: 24px;
     }
 
-    .article-cover {
-        margin-top: 32px;
+    .article-hero__inner {
+        gap: 32px;
     }
 
     .site-footer__inner {
@@ -699,8 +710,8 @@ svg {
         line-height: 40px;
     }
 
-    .article-cover {
-        margin-top: 48px;
+    .article-hero__inner {
+        gap: 48px;
     }
 
     .site-footer__inner {
@@ -729,8 +740,8 @@ svg {
         line-height: 48px;
     }
 
-    .chip {
-        margin-top: 40px;
+    .article-hero__content {
+        gap: 40px;
     }
 }
 
@@ -776,12 +787,12 @@ svg {
         line-height: 64px;
     }
 
-    .chip {
-        margin-top: 48px;
+    .article-hero__content {
+        gap: 48px;
     }
 
-    .article-cover {
-        margin-top: 64px;
+    .article-hero__inner {
+        gap: 64px;
     }
 
     .site-footer__inner {
