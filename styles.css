@@ -474,6 +474,23 @@ svg {
     display: none;
 }
 
+.article-share__button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    flex: 0 0 60px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.article-share__icon {
+    width: 60px;
+    height: 60px;
+}
+
 .article-contents {
     margin-bottom: 40px;
 }
@@ -685,6 +702,7 @@ svg {
 .breadcrumbs__link:focus-visible,
 .article-contents__link:focus-visible,
 .article-content__link:focus-visible,
+.article-share__button:focus-visible,
 .note__link:focus-visible,
 .site-footer__logo-link:focus-visible,
 .site-footer__contact:focus-visible,
@@ -897,7 +915,7 @@ svg {
         grid-template-columns: 60px minmax(0, 630px);
         align-items: start;
         justify-content: start;
-        gap: 20px;
+        gap: 49px;
     }
 
     .article-content__main {
@@ -905,9 +923,14 @@ svg {
     }
 
     .article-share {
-        display: block;
+        display: flex;
+        position: sticky;
+        top: 0;
+        flex-direction: column;
+        gap: 16px;
         width: 60px;
         height: 260px;
+        padding-top: 48px;
     }
 
     .article-contents__title,

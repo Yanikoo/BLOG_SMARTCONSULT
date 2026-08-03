@@ -45,3 +45,63 @@
         }
     });
 })();
+
+(() => {
+    const shareButtons = document.querySelectorAll("[data-share-network]");
+    const copyButton = document.querySelector("[data-share-link]");
+
+    if (!shareButtons.length && !copyButton) {
+        return;
+    }
+
+    const pageUrl = window.location.href;
+    const pageTitle = document.title;
+    const shareUrls = {
+        vk: `https://vk.com/share.php?url=${encodeURIComponent(pageUrl)}&title=${encodeURIComponent(pageTitle)}&utm_source=share2`,
+        ok: `https://connect.ok.ru/offer?url=${encodeURIComponent(pageUrl)}&title=${encodeURIComponent(pageTitle)}&utm_source=share2`
+    };
+
+    shareButtons.forEach((button) => {
+        const network = button.dataset.shareNetwork;
+
+        if (shareUrls[network]) {
+            button.href = shareUrls[network];
+        }
+    });
+
+    if (!copyButton) {
+        return;
+    }
+
+    const copyPageUrl = async () => {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(pageUrl);
+            return;
+        }
+
+        const field = document.createElement("textarea");
+        field.value = pageUrl;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.opacity = "0";
+        document.body.append(field);
+        field.select();
+        document.execCommand("copy");
+        field.remove();
+    };
+
+    copyButton.addEventListener("click", async () => {
+        try {
+            await copyPageUrl();
+            copyButton.setAttribute("aria-label", "Ссылка скопирована");
+            copyButton.title = "Ссылка скопирована";
+
+            window.setTimeout(() => {
+                copyButton.setAttribute("aria-label", "Копировать ссылку на статью");
+                copyButton.title = "Копировать ссылку";
+            }, 2000);
+        } catch {
+            copyButton.setAttribute("aria-label", "Не удалось скопировать ссылку");
+        }
+    });
+})();
