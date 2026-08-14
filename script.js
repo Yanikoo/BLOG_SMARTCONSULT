@@ -66,6 +66,25 @@
 
         if (shareUrls[network]) {
             button.href = shareUrls[network];
+
+            button.addEventListener("click", (event) => {
+                if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const popupWidth = 640;
+                const popupHeight = 520;
+                const popupLeft = Math.max(0, window.screenX + (window.outerWidth - popupWidth) / 2);
+                const popupTop = Math.max(0, window.screenY + (window.outerHeight - popupHeight) / 2);
+
+                window.open(
+                    button.href,
+                    "articleShareWindow",
+                    `popup=yes,width=${popupWidth},height=${popupHeight},left=${Math.round(popupLeft)},top=${Math.round(popupTop)},noopener,noreferrer`
+                );
+            });
         }
     });
 

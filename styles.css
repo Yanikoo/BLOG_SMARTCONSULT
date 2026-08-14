@@ -390,9 +390,9 @@ svg {
     border-radius: 6px;
     background: var(--color-surface);
     font-family: "Golos Text", system-ui, -apple-system, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 22px;
     letter-spacing: 0;
     text-align: center;
     white-space: nowrap;
@@ -421,9 +421,9 @@ svg {
 }
 
 .chip__icon {
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
     color: var(--color-purple-dark);
 }
 
@@ -440,7 +440,7 @@ svg {
 
 .chip__text {
     display: block;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .article-cover {
@@ -523,7 +523,7 @@ svg {
 .article-contents__list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
     margin: 16px 0 0;
     padding-left: 24px;
 }
@@ -771,6 +771,21 @@ svg {
         gap: 16px;
     }
 
+    .chip__category {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .chip__text {
+        font-size: 16px;
+    }
+
+    .chip__icon {
+        width: 20px;
+        height: 20px;
+        flex-basis: 20px;
+    }
+
     .chip__item--time {
         width: 78px;
     }
@@ -944,7 +959,7 @@ svg {
     .article-share {
         display: flex;
         position: sticky;
-        top: 0;
+        top: 24px;
         flex-direction: column;
         gap: 16px;
         width: 60px;
