@@ -491,13 +491,13 @@ svg {
     height: 60px;
 }
 
-.article-share__icon > rect,
+.article-share__icon>rect,
 .article-share__icon path {
     transition: fill 160ms ease;
 }
 
-.article-share__button:hover .article-share__icon > rect,
-.article-share__button:focus-visible .article-share__icon > rect {
+.article-share__button:hover .article-share__icon>rect,
+.article-share__button:focus-visible .article-share__icon>rect {
     fill: #4749d1;
 }
 
@@ -581,7 +581,7 @@ svg {
     gap: 24px;
 }
 
-.article-content__main > .article-section + .article-section {
+.article-content__main>.article-section+.article-section {
     margin-top: 40px;
 }
 
@@ -1045,7 +1045,7 @@ svg {
     }
 
     .article-hero {
-        padding: 80px;
+        padding: 48px;
     }
 
     .article-hero__title {
